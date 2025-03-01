@@ -1,5 +1,4 @@
-touch requirements.txt
-
 streamlit
 pandas
 numpy
+google-generativeai

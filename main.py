@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 # Load environment variables
 load_dotenv()
-API_KEY = os.getenv("GEMINI_API_KEY")
+# API_KEY = os.getenv("GEMINI_API_KEY")
+API_KEY = st.secrets["google"]["api_key"] 
 
 # Configure Gemini AI
 genai.configure(api_key=API_KEY)
@@ -45,3 +46,5 @@ if user_input:
     st.session_state.messages.append({"role": "assistant", "content": bot_response})
     with st.chat_message("assistant"):
         st.markdown(bot_response)
+
+
